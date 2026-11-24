@@ -1,0 +1,37 @@
+{
+  "name": "@openapi-sdk-tools/effect",
+  "version": "0.1.0",
+  "description": "Effect Schema and Match plugins for OpenAPI SDK Tools",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": ["dist"],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=22.19"
+  },
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "tsc -p tsconfig.json",
+    "pretest": "pnpm build",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "peerDependencies": {
+    "@openapi-sdk-tools/core": "^2.0.0",
+    "effect": "^4.1.0"
+  },
+  "devDependencies": {
+    "@openapi-sdk-tools/core": "^2.0.0",
+    "effect": "^4.1.0",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.9.3",
+    "vitest": "^2.1.0"
+  }
+}
